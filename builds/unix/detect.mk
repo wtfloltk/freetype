@@ -12,7 +12,7 @@
 # indicate that you have read the license and understand and accept it
 # fully.
 
-.PHONY: setup
+.PHONY: 
 
 ifeq ($(PLATFORM),ansi)
 
