@@ -42,7 +42,7 @@ ifeq ($(PLATFORM),unix)
     CC          := gcc
 
     .PHONY: devel
-    devel: setup
+    devel: 
 	    @:
   else
 
@@ -54,7 +54,7 @@ ifeq ($(PLATFORM),unix)
       CC          := lcc
 
       .PHONY: lcc
-      lcc: setup
+      lcc: 
 	      @:
     else
 
@@ -75,7 +75,7 @@ ifeq ($(PLATFORM),unix)
       must_configure := 1
 
       .PHONY: unix
-      unix: setup
+      unix: 
 	      @:
     endif
   endif
@@ -86,10 +86,10 @@ ifeq ($(PLATFORM),unix)
   ifdef must_configure
     ifneq ($(have_Makefile),)
       # we are building FT2 not in the src tree
-	        $(TOP_DIR)/builds/unix/configure $(value CFG)
+	        $(TOP_DIR)/builds/unix/configure
     else
 	      cd builds/unix; \
-	        ./configure $(value CFG)
+	        ./configure
     endif
   endif
 
